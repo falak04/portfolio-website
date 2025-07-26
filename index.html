@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Personal portfolio for Falak Shah, a software developer specializing in full-stack web development. Showcasing projects, skills, and experience." />
+    <title>Falak Shah | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class', // Keeping dark mode consistent
+        theme: {
+          extend: {
+            colors: {
+              violet: {
+                50: '#f5f3ff', 100: '#ede9fe', 200: '#ddd6fe', 300: '#c4b5fd',
+                400: '#a78bfa', 500: '#8b5cf6', 600: '#7c3aed', 700: '#6d28d9',
+                800: '#5b21b6', 900: '#4c1d95', 950: '#2e1065',
+              },
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.5s ease-in-out forwards',
+              'caret-blink': 'caretBlink 1.25s step-end infinite',
+              'wave': 'wave 2.5s infinite',
+              'blob': 'blob 7s infinite',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0', transform: 'translateY(10px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              caretBlink: {
+                '0%, 100%': { opacity: '1' },
+                '50%': { opacity: '0' },
+              },
+              wave: {
+                '0%': { transform: 'rotate(0.0deg)' },
+                '10%': { transform: 'rotate(14.0deg)' },
+                '20%': { transform: 'rotate(-8.0deg)' },
+                '30%': { transform: 'rotate(14.0deg)' },
+                '40%': { transform: 'rotate(-4.0deg)' },
+                '50%': { transform: 'rotate(10.0deg)' },
+                '60%': { transform: 'rotate(0.0deg)' },
+                '100%': { transform: 'rotate(0.0deg)' },
+              },
+              blob: {
+                '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                '100%': { transform: 'translate(0px, 0px) scale(1)' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      /* Starry background */
+      .stars {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        background: transparent;
+      }
+      .stars {
+        background: #000 url(data:image/png;base64,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/9f/r/9f/v/9//p/9f/r/9f/p/9//r/9//r/9f/p/9f/v/9f/p/9f/v/8//p/9f/r/9f/r/9f/p/9f/p/9f/p/9//v/9f/p/8v/v/9n/r/8//r/8//r/9f/p/9f/p/9//v/9f/v/9f/r/9//r/9f/r/8//r/9f/p/9f/p/9f/v/9f/p/8//r/8//p/8//v/9f/r/9f/v/9n/r/9f/p/9//p/9f/p/8//r/8//r/9f/v/9f/v/9f/v/9n/r/8//r/9f/v/9f/r/9f/r/9f/r/9//p/9//p/9n/v/9f/p/9f/r/9f/r/9f/p/9f/r/8//p/8//p/9f/v/9f/r/9f/r/9f/v/9f/v/9f/r/8//r/8//p/9f/p/9f/v/9f/p/9f/v/9f/p/9f/v/9f/r/8//p/9//p/9//p/8//p/8//p/8//p/9f/p/9f/v/9f/p/9f/r/9f/r/8//p/8//p/8//p/9f/p/9f/p/9f/v/9f/p/9f/v/9f/r/9f/r/8//p/9f/p/9f/v/9f/r/9f/r/9f/r/9f/p/9f/v/9f/r/9f/r/9f/r/9f/r/9f/p/9f/v/9f/p/9f/v/9f/r/9f/r/9f/p/9f/v/9f/r/9f/p/9f/v/9f/p/9f/p/9f/v/9f/p/9f/p/9f/v/9f/p/9f/p/9f/v/9f/p/9f/p/9f/v/9f/p/9f/p/9f/v/9f/p/9f/p/9f/p/9f/p/9f/v/9f/p/9f/v/9f/p/9f/p/9f/v/9f/p/9f/p/9f/v/9f/p/9f/p/9f/v/9f/p/9f/p/9f/v/9f/p/9f/p/9f/v/9f/p/9f/p/9f/p/9f/p/9f/p/9f/v/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p/9f/p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qVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUq-lSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUqVKlSpUq//9k=) repeat;
+      }
+      .blob {
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        background: linear-gradient(180deg, rgba(76, 29, 149, 0.4) 0%, rgba(139, 92, 246, 0.2) 100%);
+        border-radius: 50%;
+        filter: blur(80px);
+        z-index: 1;
+      }
+    </style>
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-gray-900 text-gray-300 antialiased selection:bg-violet-500/30">
+    <div id="root" class="relative overflow-x-hidden"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
