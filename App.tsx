@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import homeLogo from './assets/home-main.svg'
+import homeLogo from "./assets/home-main.svg"
 // Typewriter Component
 const Typewriter = ({ titles }) => {
   const [index, setIndex] = useState(0);
@@ -150,7 +150,7 @@ const App = () => {
                   <img 
                     src={homeLogo}
                     alt="Falak Shah"
-                    className="relative z-10 w-64 h-64 md:w-80 md:h-80 rounded-full object-cover  shadow-2xl"
+                    className="relative z-10 w-64 h-64 md:w-80 md:h-80 rounded-full object-cover shadow-2xl"
                   />
                   {/* Floating elements */}
                   <div className="absolute -top-4 -right-4 w-12 h-12 bg-yellow-400 rounded-full animate-pulse"></div>
@@ -159,7 +159,21 @@ const App = () => {
               </div>
             </div>
 
-            
+            {/* Quick Stats/Highlights */}
+            {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8 animate-fade-in" style={{animationDelay: '0.5s'}}>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center transform hover:scale-105 transition-transform duration-300">
+                <div className="text-3xl font-bold text-yellow-300 mb-2">8.95</div>
+                <div className="text-sm text-gray-200">CGPA</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center transform hover:scale-105 transition-transform duration-300">
+                <div className="text-3xl font-bold text-yellow-300 mb-2">4+</div>
+                <div className="text-sm text-gray-200">Projects</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center transform hover:scale-105 transition-transform duration-300">
+                <div className="text-3xl font-bold text-yellow-300 mb-2">1</div>
+                <div className="text-sm text-gray-200">Publication</div>
+              </div>
+            </div> */}
 
             {/* Scroll indicator */}
             <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
@@ -173,7 +187,7 @@ const App = () => {
         {/* About Section */}
         <section id="about" className="py-20 px-6 md:px-12 bg-white">
           <div className="container mx-auto max-w-4xl">
-            <h2 className="text-4xl font-bold text-center text-indigo-700 mb-12">About Me</h2>
+            {/* <h2 className="text-4xl font-bold text-center text-indigo-700 mb-12">About Me</h2> */}
             <div className="flex flex-col md:flex-row items-center md:space-x-10">
               <div className="md:w-1/3 mb-8 md:mb-0">
                 <img
@@ -222,107 +236,78 @@ const App = () => {
         {/* Projects Section */}
         <section id="projects" className="py-20 px-6 md:px-12 bg-white">
           <div className="container mx-auto max-w-5xl">
-            <h2 className="text-4xl font-bold text-center text-indigo-700 mb-12">My Projects</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-              {/* Project 1: E-commerce Platform */}
-              <div className="bg-gray-50 rounded-lg shadow-xl overflow-hidden transform transition-transform hover:scale-105 duration-300">
-                <img
-                  src="https://placehold.co/400x250/A78BFA/FFFFFF?text=E-commerce"
-                  alt="E-commerce Platform"
-                  className="w-full h-48 object-cover"
-                />
-                <div className="p-6">
-                  <h3 className="text-2xl font-semibold text-gray-900 mb-3">E-commerce Platform</h3>
-                  <p className="text-gray-700 mb-4 text-md">
-                    A full-stack e-commerce platform with customer and seller roles, secure authentication, product listings, cart, order tracking, and seller dashboards.
-                  </p>
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm font-medium text-indigo-600">React.js, Node.js, Express.js, MongoDB, Tailwind CSS, Passport.js</span>
-                    <a
-                      href="#"
-                      className="text-indigo-700 hover:text-indigo-900 text-2xl"
-                      aria-label="GitHub Link"
-                    >
-                      <i className="fab fa-github"></i>
-                    </a>
-                  </div>
-                </div>
+            <h2 className="text-4xl font-bold text-center text-indigo-700 mb-12 relative">
+              My Projects
+              <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-20 h-1 bg-violet-500 rounded-full"></span>
+            </h2>
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+              {/* Project 1: Full Stack Attendance Management System */}
+              <div className="bg-gray-800/10 backdrop-blur-sm p-6 rounded-lg shadow-lg hover:shadow-violet-500/10 hover:-translate-y-1 transition-all duration-300 border border-gray-200 hover:border-violet-500/50 flex flex-col h-full">
+                <h3 className="text-xl font-bold text-gray-900 mb-3 leading-tight">Full Stack Attendance Management System</h3>
+                <p className="text-gray-600 mb-4 leading-relaxed">Backend API for intelligent attendance tracking.</p>
+                <ul className="list-none space-y-3 text-gray-700 mb-6 flex-grow">
+                  <li className="flex items-start gap-3 leading-relaxed">
+                    <span className="text-violet-500 mt-1.5 text-xs">●</span>
+                    <span className="flex-1">Built scalable backend using <strong className="font-semibold text-violet-600">Node.js</strong>, <strong className="font-semibold text-violet-600">Express.js</strong>, and <strong className="font-semibold text-violet-600">MongoDB</strong> with modular routing and file upload via <strong className="font-semibold text-violet-600">Multer</strong>.</span>
+                  </li>
+                  <li className="flex items-start gap-3 leading-relaxed">
+                    <span className="text-violet-500 mt-1.5 text-xs">●</span>
+                    <span className="flex-1">Configured <strong className="font-semibold text-violet-600">CORS</strong> and <strong className="font-semibold text-violet-600">dotenv</strong> for a secure environment and cross-origin access.</span>
+                  </li>
+                </ul>
+                <a href="https://github.com/falak04/Attendance-.git" target="_blank" rel="noopener noreferrer" className="text-violet-600 hover:text-violet-700 hover:underline flex items-center gap-2 text-sm font-medium self-start mt-auto pt-2 transition-colors">
+                  <i className="fab fa-github w-4 h-4"></i>
+                  View on GitHub
+                  <i className="fas fa-external-link-alt w-4 h-4"></i>
+                </a>
               </div>
 
-              {/* Project 2: Full Stack Attendance Management System */}
-              <div className="bg-gray-50 rounded-lg shadow-xl overflow-hidden transform transition-transform hover:scale-105 duration-300">
-                <img
-                  src="https://placehold.co/400x250/A78BFA/FFFFFF?text=Attendance+System"
-                  alt="Attendance Management System"
-                  className="w-full h-48 object-cover"
-                />
-                <div className="p-6">
-                  <h3 className="text-2xl font-semibold text-gray-900 mb-3">Attendance Management System</h3>
-                  <p className="text-gray-700 mb-4 text-md">
-                    Backend API for intelligent attendance tracking, built with Node.js, Express.js, and MongoDB, featuring modular routing and file uploads.
-                  </p>
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm font-medium text-indigo-600">Node.js, Express.js, MongoDB, Multer, CORS, dotenv</span>
-                    <a
-                      href="#"
-                      className="text-indigo-700 hover:text-indigo-900 text-2xl"
-                      aria-label="GitHub Link"
-                    >
-                      <i className="fab fa-github"></i>
-                    </a>
-                  </div>
-                </div>
+              {/* Project 2: Wanderlust Travel Platform */}
+              <div className="bg-gray-800/10 backdrop-blur-sm p-6 rounded-lg shadow-lg hover:shadow-violet-500/10 hover:-translate-y-1 transition-all duration-300 border border-gray-200 hover:border-violet-500/50 flex flex-col h-full">
+                <h3 className="text-xl font-bold text-gray-900 mb-3 leading-tight">Wanderlust Travel Platform</h3>
+                <p className="text-gray-600 mb-4 leading-relaxed">Travel accommodation listing app with authentication, image uploads, and reviews.</p>
+                <ul className="list-none space-y-3 text-gray-700 mb-6 flex-grow">
+                  <li className="flex items-start gap-3 leading-relaxed">
+                    <span className="text-violet-500 mt-1.5 text-xs">●</span>
+                    <span className="flex-1">Built backend with <strong className="font-semibold text-violet-600">Node.js</strong>, <strong className="font-semibold text-violet-600">Express.js</strong>, and <strong className="font-semibold text-violet-600">MongoDB Atlas</strong>; templated views with <strong className="font-semibold text-violet-600">EJS</strong>.</span>
+                  </li>
+                  <li className="flex items-start gap-3 leading-relaxed">
+                    <span className="text-violet-500 mt-1.5 text-xs">●</span>
+                    <span className="flex-1">Integrated <strong className="font-semibold text-violet-600">Cloudinary</strong> for image storage and <strong className="font-semibold text-violet-600">Passport.JS</strong> for session-based authentication.</span>
+                  </li>
+                </ul>
+                <a href="https://github.com/falak04/wanderlust.git" target="_blank" rel="noopener noreferrer" className="text-violet-600 hover:text-violet-700 hover:underline flex items-center gap-2 text-sm font-medium self-start mt-auto pt-2 transition-colors">
+                  <i className="fab fa-github w-4 h-4"></i>
+                  View on GitHub
+                  <i className="fas fa-external-link-alt w-4 h-4"></i>
+                </a>
               </div>
 
-              {/* Project 3: Wanderlust Travel Platform */}
-              <div className="bg-gray-50 rounded-lg shadow-xl overflow-hidden transform transition-transform hover:scale-105 duration-300">
-                <img
-                  src="https://placehold.co/400x250/A78BFA/FFFFFF?text=Travel+Platform"
-                  alt="Wanderlust Travel Platform"
-                  className="w-full h-48 object-cover"
-                />
-                <div className="p-6">
-                  <h3 className="text-2xl font-semibold text-gray-900 mb-3">Wanderlust Travel Platform</h3>
-                  <p className="text-gray-700 mb-4 text-md">
-                    Travel accommodation listing app with authentication, image uploads via Cloudinary, and reviews, built with Node.js, Express.js, MongoDB Atlas, EJS, and Passport.js.
-                  </p>
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm font-medium text-indigo-600">Node.js, Express.js, MongoDB Atlas, EJS, Cloudinary, Passport.js</span>
-                    <a
-                      href="#"
-                      className="text-indigo-700 hover:text-indigo-900 text-2xl"
-                      aria-label="GitHub Link"
-                    >
-                      <i className="fab fa-github"></i>
-                    </a>
-                  </div>
-                </div>
+              {/* Project 3: Classroom Booking Management System */}
+              <div className="bg-gray-800/10 backdrop-blur-sm p-6 rounded-lg shadow-lg hover:shadow-violet-500/10 hover:-translate-y-1 transition-all duration-300 border border-gray-200 hover:border-violet-500/50 flex flex-col h-full">
+                <h3 className="text-xl font-bold text-gray-900 mb-3 leading-tight">Classroom Booking Management System</h3>
+                <p className="text-gray-600 mb-4 leading-relaxed">Full-stack web app for institutional classroom/lab scheduling.</p>
+                <ul className="list-none space-y-3 text-gray-700 mb-6 flex-grow">
+                  <li className="flex items-start gap-3 leading-relaxed">
+                    <span className="text-violet-500 mt-1.5 text-xs">●</span>
+                    <span className="flex-1">Implemented role-based booking logic (admin, HOD, teacher, lab assistant) with <strong className="font-semibold text-violet-600">JWT</strong> auth and approval workflow.</span>
+                  </li>
+                  <li className="flex items-start gap-3 leading-relaxed">
+                    <span className="text-violet-500 mt-1.5 text-xs">●</span>
+                    <span className="flex-1">Built REST API using <strong className="font-semibold text-violet-600">Node.js</strong>, <strong className="font-semibold text-violet-600">Express.js</strong>, and <strong className="font-semibold text-violet-600">MongoDB</strong>; frontend in <strong className="font-semibold text-violet-600">React.js</strong> and <strong className="font-semibold text-violet-600">Material-UI</strong>.</span>
+                  </li>
+                  <li className="flex items-start gap-3 leading-relaxed">
+                    <span className="text-violet-500 mt-1.5 text-xs">●</span>
+                    <span className="flex-1">Added data export to PDF and Excel via <strong className="font-semibold text-violet-600">jsPDF</strong> and <strong className="font-semibold text-violet-600">ExcelJS</strong>.</span>
+                  </li>
+                </ul>
+                <a href="https://github.com/falak04/Booking-System.git" target="_blank" rel="noopener noreferrer" className="text-violet-600 hover:text-violet-700 hover:underline flex items-center gap-2 text-sm font-medium self-start mt-auto pt-2 transition-colors">
+                  <i className="fab fa-github w-4 h-4"></i>
+                  View on GitHub
+                  <i className="fas fa-external-link-alt w-4 h-4"></i>
+                </a>
               </div>
 
-              {/* Project 4: Classroom Booking Management System */}
-              <div className="bg-gray-50 rounded-lg shadow-xl overflow-hidden transform transition-transform hover:scale-105 duration-300">
-                <img
-                  src="https://placehold.co/400x250/A78BFA/FFFFFF?text=Classroom+Booking"
-                  alt="Classroom Booking Management System"
-                  className="w-full h-48 object-cover"
-                />
-                <div className="p-6">
-                  <h3 className="text-2xl font-semibold text-gray-900 mb-3">Classroom Booking Management System</h3>
-                  <p className="text-gray-700 mb-4 text-md">
-                    Full-stack web app for institutional classroom/lab scheduling with multi-role approval, conflict detection, JWT auth, and data export to PDF/Excel.
-                  </p>
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm font-medium text-indigo-600">Node.js, Express.js, MongoDB, React.js, Material-UI, JWT, jsPDF, ExcelJS</span>
-                    <a
-                      href="#"
-                      className="text-indigo-700 hover:text-indigo-900 text-2xl"
-                      aria-label="GitHub Link"
-                    >
-                      <i className="fab fa-github"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </section>
@@ -484,7 +469,7 @@ const App = () => {
             </div>
             <div className="flex justify-center space-x-8 text-4xl">
               <a
-                href="https://github.com/falakshah4956"
+                href="https://github.com/falak04"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-yellow-300 transition-colors duration-300"
