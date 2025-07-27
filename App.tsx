@@ -499,7 +499,7 @@ const App = () => {
         </div>
       </footer>
 
-      {/* Custom CSS for animations and general styling */}
+      {/* Custom CSS for Animations and general Styling */}
       <style>
         {`
         @keyframes fadeIn {
